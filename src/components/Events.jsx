@@ -15,7 +15,7 @@ class Event extends Component {
   render() {
     const { event } = this.props;
     console.log(event)
-    const showEvent = <p>{event.title}</p>
+  const showEvent = <a href="#"><li>{event.title}</li></a>
     return (
       <div>
         {showEvent}
