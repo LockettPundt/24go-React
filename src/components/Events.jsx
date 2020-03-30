@@ -1,29 +1,21 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
+import { Container} from 'bloomer';
+import { DropdownItem } from 'bloomer/lib/components/Dropdown/Menu/DropdownItem';
 
-
-class Event extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      
-    };
-  };
-  
-  
-  
-  
-  render() {
-    const { event } = this.props;
-    console.log(event)
-  const showEvent = <a href="#"><li>{event.title}</li></a>
+const Event = props => {
+    const { event } = props;
+    // console.log(event)
     return (
-      <div>
-        {showEvent}
-      </div>
+     <Container class="singleEvent">
+      <a href={event.url} target="_blank" rel="noopener noreferrer">
+        {event.title}
+      </a>
+     </Container>
     );
   }
   
-}
 
 
 export default Event;
